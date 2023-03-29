@@ -1,0 +1,27 @@
+/*Given two arrays, A and B, of sizes N and M, respectively. 
+Print all those elements of A that are missing in array B.
+
+Every element of the first array must be present in the second array; if not, you have to print those numbers.
+
+*/
+
+//One Liner
+const findMissingElements = (array1, array2) => array1.filter((el) => !array2.includes(el));
+
+
+//SC: O(n)
+//TC: O(n)
+// const findMissingElements = (array1, array2) => {
+//     // const result = [];
+
+//     // for(let i = 0; i < array1.length; i++){
+//     //     if(!array2.includes(array1[i])) result.push(array1[i]);
+//     // }
+
+//     // return result;
+
+// }
+
+
+console.log(findMissingElements([1, 6, 4, 0, 2], [6, 3, 4, 5, 0]));
+console.log(findMissingElements([9, 8, 7, 6, 5], [1, 2, 3, 4, 5]))
