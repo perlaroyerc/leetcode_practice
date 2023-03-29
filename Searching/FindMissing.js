@@ -6,21 +6,27 @@ Every element of the first array must be present in the second array; if not, yo
 */
 
 //One Liner
-const findMissingElements = (array1, array2) => array1.filter((el) => !array2.includes(el));
+// const findMissingElements = (array1, array2) => array1.filter((el) => !array2.includes(el));
 
 
 //SC: O(n)
 //TC: O(n)
-// const findMissingElements = (array1, array2) => {
-//     // const result = [];
+const findMissingElements = (array1, array2) => {
+    const cache = {};
+    const result = [];
 
-//     // for(let i = 0; i < array1.length; i++){
-//     //     if(!array2.includes(array1[i])) result.push(array1[i]);
-//     // }
+    for(let i = 0; i < array2.length; i++){
+       if(!cache[array2[i]]) cache[array2[i]] = 1;
+       else cache[array2[i]]++;
+    }
 
-//     // return result;
+    for(let j = 0; j < array1.length; j++){
+        if(!cache[array1[j]]) result.push(array1[j]);
+    }
 
-// }
+    return result;
+
+}
 
 
 console.log(findMissingElements([1, 6, 4, 0, 2], [6, 3, 4, 5, 0]));
