@@ -12,6 +12,10 @@ Output: true
 
 */
 
+//Binary Search solution
+//TC: O(logn)
+//SC: O(1)
+
     const searchMatrix = (matrix, target) => {
 
         const row = matrix.length;
