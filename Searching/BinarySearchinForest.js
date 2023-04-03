@@ -1,6 +1,7 @@
 /*
 
-You are given a list of positive numbers, where each number represents the height of a tree in a forest, and a positive number, K.
+You are given a list of positive numbers, where each number represents the height of a tree in a forest, 
+and a positive number, K.
 
 You have to find the height H at which every tree in the forest should be cut to collect K amount of woods.
 
