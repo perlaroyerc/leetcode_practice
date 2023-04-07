@@ -15,6 +15,27 @@ Output: true
 
 
 const isPalindrome = (head) => {
+    const stack = [];
+    let current = head;
+ 
+     while(current){
+         stack.push(current.val);
+         current = current.next;
+     }
+ 
+     current = head;
+     
+     while(current){
+         const topNode = stack.pop();
+         if(topNode !== current.val) return false;
+         current = current.next;
+     }
+ 
+     return true;
+}
+
+/*
+const isPalindrome = (head) => {
 
     const stack = [];
     const queue = [];
@@ -37,3 +58,5 @@ const isPalindrome = (head) => {
      return true;
      
  };
+
+ */
