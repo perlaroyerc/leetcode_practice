@@ -23,18 +23,18 @@ Explanation: You are given the second node with value 5, the linked list should 
 
 */
 
-    function ListNode(val) {
-      this.val = val;
-      this.next = null;
-    }
+function ListNode(val) {
+    this.val = val;
+    this.next = null;
+}
 
-    //TC: O(1)
-    //SC: O(1)
+//TC: O(1)
+//SC: O(1)
 
-   const deleteNode = (node) => {
+const deleteNode = (node) => {
    
      let next = node.next.next;
      node.val = node.next.val;
      node.next = next;
        
-   };
+};

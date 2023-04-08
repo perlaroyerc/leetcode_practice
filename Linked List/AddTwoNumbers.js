@@ -11,13 +11,12 @@ Explanation: 342 + 465 = 807.
 */
 
 
- function ListNode(val, next) {
-      this.val = (val===undefined ? 0 : val)
-      this.next = (next===undefined ? null : next)
-     }
+function ListNode(val, next) {
+    this.val = (val===undefined ? 0 : val)
+    this.next = (next===undefined ? null : next)
+}
 
 const addTwoNumbers = (l1, l2) => {
-
     const stack1 = [];
     const stack2 = [];
     const stack3 = [];
