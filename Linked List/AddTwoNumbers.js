@@ -43,13 +43,11 @@ const addTwoNumbers = (l1, l2) => {
 
     return result.next;
 
-
 }
 
 
 
-
-//Brute solution: First attempt
+//Brute Force solution: First attempt
 // const addTwoNumbers = (l1, l2) => {
 //     const stack1 = [];
 //     const stack2 = [];
