@@ -13,6 +13,11 @@ Only one valid answer exists.
 
 */
 
+
+//Space complexity: O(1)
+//Time complexity: O(n)
+
+
 const twoSum = (nums, target) => {
 
     let i = 0;
@@ -20,10 +25,12 @@ const twoSum = (nums, target) => {
 
     while(i < nums.length){
         const current = nums[i] + nums[j];
-        
+
         if(current === target) return [i, j];
         else if(current > target) j--;
         else i++;
     }
 
 }
+
+// console.log(twoSum([-1,-2,-3,-4,-5], -8));
