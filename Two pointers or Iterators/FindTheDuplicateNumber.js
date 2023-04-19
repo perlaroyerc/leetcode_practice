@@ -10,18 +10,43 @@ Output: 2
 
 */
 
+//Time complexity: O(n)
+//Space complexity: O(1)
+
+const findDuplicate = (nums) => {
+    let slow = 0;
+    let fast = 0;
+
+    while(true) {
+        slow = nums[slow];
+        fast = nums[nums[fast]];
+
+        if(slow === fast) break;
+    }
+
+    let pointer = 0;
+
+    while(pointer !== slow) {
+        slow = nums[slow];
+        pointer = nums[pointer];
+    }
+
+    return slow;
+    
+};
+
 
 // //Brute force solution
-const findDuplicate = (nums) => {
+// const findDuplicate = (nums) => {
 
-    nums.sort((a, b) => a - b);
-    let i = 0;
-    let j = i + 1;
+//     nums.sort((a, b) => a - b);
+//     let i = 0;
+//     let j = i + 1;
 
-    while(i < nums.length) {
-        if(nums[i] === nums[j]) return nums[i];
-        i++;
-        j++;
-    }
+//     while(i < nums.length) {
+//         if(nums[i] === nums[j]) return nums[i];
+//         i++;
+//         j++;
+//     }
      
-};
+// };
