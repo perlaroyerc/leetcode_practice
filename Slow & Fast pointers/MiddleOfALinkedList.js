@@ -15,25 +15,48 @@ class ListNode {
     }
 }
 
+//Optimized solition (Tortoise & Hare)
+//Time complexity: O(n)
+//Space complexity: O(1)
+
+
+const middleNode = (head) => {
+    let slow = head;
+    let fast = head;
+
+    while(fast && fast.next) {
+     
+      fast = fast.next.next;
+      slow = slow.next;
+      
+    }
+
+    return slow;
+ 
+}
+
+
+
+
 //Brute force solution
 //Time complexity: O(n)
 //Space complexity: O(1)
 
-const middleNode = (head) => {
-    let current = head;
-    let len = 0;
+// const middleNode = (head) => {
+//     let current = head;
+//     let len = 0;
 
-    while(current) {
-        len++;
-        current = current.next;
-    }
+//     while(current) {
+//         len++;
+//         current = current.next;
+//     }
 
-    current = head;
-    let count = 0;
+//     current = head;
+//     let count = 0;
 
-    while(current) {
-        if(count === Math.floor(len / 2)) return current;
-        count++;
-        current = current.next;
-    }
-}
+//     while(current) {
+//         if(count === Math.floor(len / 2)) return current;
+//         count++;
+//         current = current.next;
+//     }
+// }
